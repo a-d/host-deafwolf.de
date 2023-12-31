@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <style>
+    body {
+      background-color: #30befe;
+      overflow:hidden;
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;
+      padding:0px;
+      margin:0px;
+      font-size: 2vh;
+    }
+
+    body:before {
+      content: "";
+      position: absolute;
+      bottom:0;
+      left:0;
+      right:0;
+      height: 8vh;
+      background-color:#345a6c;
+    }
+
+
+    #wolf{
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 30%;
+      min-width: 575px;
+      width: 100%;
+      z-index: 1;
+      background: url(https://deafflow.com/content-images/uknv5g2yeca92.gif) left bottom no-repeat;
+      background-size: contain;
+      animation-name: MOVE-WOLF;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes MOVE-WOLF {
+       from { transform: translateX(100vw); }
+       to { transform: translateX(-80vw); }
+    }
+
+    #satan{
+      position: absolute;
+      left: 0;
+      bottom: 1vh;
+      height: 30%;
+      min-width: 575px;
+      width: 100%;
+      z-index: 2;
+      background: url(https://deafflow.com/content-images/dev2.gif) left bottom no-repeat;
+      background-size: contain;
+      animation-name: MOVE-SATAN;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes MOVE-SATAN {
+       from { transform: translateX(calc(180vw)); }
+       to { transform: translateX(-50vw); }
+    }
+
+    #bubble {
+        position: absolute;
+        background: #345a6c;
+      border:0.1em solid #000;
+        border-radius: .4em;
+      padding: 1em;
+      bottom:0;
+      display:inline-block;
+      font-family:monospace;
+      font-weight:bold;
+      color:#dfdfdf;
+      margin: 0 0 20vh 10vh;
+      text-align: center;
+    }
+    #bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0.1em;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #345a6c;
+        border-bottom: 0;
+        border-left: 0;
+        margin-left: -10px;
+        margin-bottom: -20px;
+    }
+
+
+    img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 30vh;
+      left: 0;
+      margin: auto;
+      width: auto;
+      height: 60vh;
+      max-width: 80vw;
+      filter: drop-shadow(#345a6c 0.5rem 0.5rem 1rem);
+      opacity: 80%;
+    }
+    img:hover {
+      opacity: 100%;
+    }
+    </style>
+    <title>DEAF WOLF</title>
+  </head>
+  <body>
+
+  <div id="wolf">
+      <div id="bubble">Not Today,<br/>Satan!</div>
+  </div>
+  <div id="satan"></div>
+  <a href="https://deafflow.com"><img src="https://deafflow.com/content-images/Bandlogo2022-07-21-web3.svg" alt="DEAF WOLF" /></a>
+
+  </body>
+</html>
